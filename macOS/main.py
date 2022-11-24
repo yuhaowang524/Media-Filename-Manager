@@ -33,9 +33,9 @@ def filename_changer(argv):
             for num, file in enumerate(file_list, 1):
                 file_ext = os.path.splitext(file)[-1].lower()
                 if file_ext == '.mp4' or file_ext == '.mkv':
-                    old_path = file_address + "\\" + file
+                    old_path = file_address + "/" + file
                     new_name = argv[2] + '_S' + argv[3] + 'E' + str(num) + file_ext
-                    new_path = file_address + "\\" + new_name
+                    new_path = file_address + "/" + new_name
                     if argv[4] == '1':
                         os.rename(old_path, new_path)
                     print(file + " now changes to " + new_name)
@@ -53,9 +53,9 @@ def filename_changer(argv):
             for file in file_list:
                 file_ext = os.path.splitext(file)[-1].lower()
                 if file_ext == '.mp4' or file_ext == '.mkv':
-                    old_path = file_address + "\\" + file
+                    old_path = file_address + "/" + file
                     new_name = argv[2] + '_' + argv[3] + file_ext
-                    new_path = file_address + "\\" + new_name
+                    new_path = file_address + "/" + new_name
                     if argv[4] == '1':
                         os.rename(old_path, new_path)
                     print(file + " now changes to " + new_name)
